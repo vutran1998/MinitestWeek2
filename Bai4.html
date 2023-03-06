@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let total = 0;
+    let count = 0;
+    var list = [];
+
+    function set() {
+        let A = +prompt("Nhập độ dài của mảng");
+        list.length = A;
+        for (let i = 0; i < list.length; i++) {
+            list[i] = +prompt("Nhập phần tử của mảng");
+        }
+    }
+    function displaylist() {
+        for (let i = 0; i < list.length; i++) {
+            document.write("Phần tử của mảng là" + list[i] + "<br>");
+        }
+    }
+    function work() {
+        for (let i = 0; i < list.length; i++) {
+            if (list[i] % 2 == 0) {
+                total += list[i];
+                count++;
+            }
+        }
+        document.write("tổng các số chẵn là" + count + "<br>");
+        document.write("tổng giá trị các số chẵn là" + total);
+    }
+    set();
+    displaylist();
+    work();
+</script>
+</body>
+</html>
